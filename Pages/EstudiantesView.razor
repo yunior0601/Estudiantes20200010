@@ -1,0 +1,96 @@
+@page "/Estudiante"
+@using Data.Models
+
+
+
+<PageTitle>Estudiantes</PageTitle>
+<div class="container" style="border: solid 1px gray; padding: 15px; background-color: lightblue; border-radius: 10px;">
+    <legend>Estudiantes</legend>
+    <div class="mb-3 row">
+        <div class="col-6">
+            <label for="txtNombre">Nombre</label>
+            <input type="text" @bind="@Nombre" name="txtNombre" id="txtNombre">
+        </div>
+        <div class="col-6">
+            <label for="txtApellido">Apellido</label>
+            <input type="text" @bind="@Apellido" name="txtApellido" id="txtApellido">
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <div class="col-6">
+            <label for="txtCarrera">Carrera</label>
+            <input type="text" @bind="@Carrera" name="txtCarrera" id="txtCarrera">
+        </div>
+        <div class="col-6">
+            <label for="txtMatricula">Matricula</label>
+            <input type="text" @bind="@Matricula" name="txtMatricula" id="txtMatricula" maxlength="9">
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <div class="col-6">
+            <label for="txtFN">Fecha de Nacimiento</label>
+            <input type="date" name="txtFN" id="txtFN" @bind="@FechaNacimiento">
+        </div>
+    </div>
+    <div style="text-align: center ;">
+        <button type="button" class="btn btn-success">Guardar</button>
+        <button type="button" class="btn btn-warning">Limpiar</button>
+        <button type="button" class="btn btn-danger">Eliminar</button>
+    </div>
+</div>
+<div class="mt-3"></div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>FechadeNacimiento</th>
+            <th>Matricula</th>
+            <th>Carrera</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+     @if(Estudiantes!=null){
+            @foreach (var estudiante in Estudiantes)
+        {
+            <tr>
+                <td>@estudiante.Nombre</td>
+                <td>@estudiante.Apellido</td>
+                <td>@estudiante.FechadeNacimiento.ToString("dd/MM/yyyy")</td>
+                <td>@estudiante.Matricula</td>
+                <td>@estudiante.Carrera</td>
+            </tr>
+        }
+        }
+    </tbody>
+</table>
+
+
+
+@code {
+    public int EstudianteID { get; set; }
+    public string Nombre { get; set; } = null!;
+    public string Apellido { get; set; } = null!;
+    public DateTime FechaNacimiento { get; set; }
+    public string Matricula { get; set; } = null!;
+    public string Carrera { get; set; } = null!;
+    public List<Estudiante> Estudiantes { get; set; } = null!;
+        protected override Task OnInitializedAsync()
+        {
+            Estudiantes = new List<Estudiante>();
+            return base.OnInitializedAsync();
+        }
+    private void Agregar(){
+        Estudiantes.Add(new Estudiante(){
+            EstudiantesID = 0,
+            Nombre = Nombre,
+            Apellido = Apellido,
+            Matricula = Matricula,
+            FechadeNacimiento = FechaNacimiento,
+            Carrera = Carrera
+            });
+    }
+    private string FechaNacIsValid() => FechaNacimiento>DateTime.Now ? "is-invalid":"";
+}
+

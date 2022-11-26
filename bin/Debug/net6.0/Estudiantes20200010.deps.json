@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Estudiantes20200010/1.0.0": {
+        "runtime": {
+          "Estudiantes20200010.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Estudiantes20200010/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
