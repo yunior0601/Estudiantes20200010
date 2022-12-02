@@ -1,7 +1,7 @@
 using Estudiantes20200010.Data.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Estudiantes.Data.Context;
+namespace Estudiantes20200010.Data.Context;
  public class EstudiantesDbContext:DbContext,IEstudiantesDbContext
 {
     public EstudiantesDbContext(DbContextOptions options):base(options)

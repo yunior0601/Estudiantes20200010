@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Estudiantes20200010.Data;
-using Estudiantes.Data.Context;
+using Estudiantes20200010.Data.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,15 +13,6 @@ builder.Services.AddSqlite<EstudiantesDbContext>("Data Source=.//Data//Context//
 builder.Services.AddScoped<IEstudiantesDbContext,EstudiantesDbContext>();
 
 var app = builder.Build();
-var scopeFactory = app.Services.GetRequiredService<IServiceScopeFactory>();
-using (var scope = scopeFactory.CreateScope())
-{
-    var db = scope.ServiceProvider.GetRequiredService<EstudiantesDbContext>();
-    if (db.Database.EnsureCreated())
-    {
-       
-    }
-}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -39,5 +30,16 @@ app.UseRouting();
 
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
+
+
+var scopeFactory = app.Services.GetRequiredService<IServiceScopeFactory>();
+using (var scope = scopeFactory.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<EstudiantesDbContext>();
+    if (db.Database.EnsureCreated())
+    {
+       
+    }
+}
 
 app.Run();
