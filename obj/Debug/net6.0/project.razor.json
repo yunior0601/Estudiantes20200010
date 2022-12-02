@@ -12,39 +12,6 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": 764874743,
-        "Kind": "Components.Component",
-        "Name": "Estudiantes20200010.Pages.Counter",
-        "AssemblyName": "Estudiantes20200010",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Counter"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Estudiantes20200010.Pages.Counter"
-        }
-      },
-      {
-        "HashCode": 1200382206,
-        "Kind": "Components.Component",
-        "Name": "Estudiantes20200010.Pages.Counter",
-        "AssemblyName": "Estudiantes20200010",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Estudiantes20200010.Pages.Counter"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Estudiantes20200010.Pages.Counter",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 102607032,
         "Kind": "Components.Component",
         "Name": "Estudiantes20200010.Pages.EstudiantesView",
@@ -74,6 +41,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Estudiantes20200010.Pages.EstudiantesView",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 764874743,
+        "Kind": "Components.Component",
+        "Name": "Estudiantes20200010.Pages.Counter",
+        "AssemblyName": "Estudiantes20200010",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Counter"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Estudiantes20200010.Pages.Counter"
+        }
+      },
+      {
+        "HashCode": 1200382206,
+        "Kind": "Components.Component",
+        "Name": "Estudiantes20200010.Pages.Counter",
+        "AssemblyName": "Estudiantes20200010",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Estudiantes20200010.Pages.Counter"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Estudiantes20200010.Pages.Counter",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -140,92 +140,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Estudiantes20200010.Pages.Index",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -423751887,
-        "Kind": "Components.Component",
-        "Name": "Estudiantes20200010.App",
-        "AssemblyName": "Estudiantes20200010",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Estudiantes20200010.App"
-        }
-      },
-      {
-        "HashCode": -1782937058,
-        "Kind": "Components.Component",
-        "Name": "Estudiantes20200010.App",
-        "AssemblyName": "Estudiantes20200010",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Estudiantes20200010.App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Estudiantes20200010.App",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 275356661,
-        "Kind": "Components.Component",
-        "Name": "Estudiantes20200010.Shared.SurveyPrompt",
-        "AssemblyName": "Estudiantes20200010",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "SurveyPrompt"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Estudiantes20200010.Shared.SurveyPrompt"
-        }
-      },
-      {
-        "HashCode": 1983218232,
-        "Kind": "Components.Component",
-        "Name": "Estudiantes20200010.Shared.SurveyPrompt",
-        "AssemblyName": "Estudiantes20200010",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Estudiantes20200010.Shared.SurveyPrompt"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Estudiantes20200010.Shared.SurveyPrompt",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -355,6 +269,92 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Estudiantes20200010.Shared.NavMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 275356661,
+        "Kind": "Components.Component",
+        "Name": "Estudiantes20200010.Shared.SurveyPrompt",
+        "AssemblyName": "Estudiantes20200010",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "SurveyPrompt"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Estudiantes20200010.Shared.SurveyPrompt"
+        }
+      },
+      {
+        "HashCode": 1983218232,
+        "Kind": "Components.Component",
+        "Name": "Estudiantes20200010.Shared.SurveyPrompt",
+        "AssemblyName": "Estudiantes20200010",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Estudiantes20200010.Shared.SurveyPrompt"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Estudiantes20200010.Shared.SurveyPrompt",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -423751887,
+        "Kind": "Components.Component",
+        "Name": "Estudiantes20200010.App",
+        "AssemblyName": "Estudiantes20200010",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Estudiantes20200010.App"
+        }
+      },
+      {
+        "HashCode": -1782937058,
+        "Kind": "Components.Component",
+        "Name": "Estudiantes20200010.App",
+        "AssemblyName": "Estudiantes20200010",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Estudiantes20200010.App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Estudiantes20200010.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

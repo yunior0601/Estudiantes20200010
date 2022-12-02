@@ -9,31 +9,36 @@
     <div class="mb-3 row">
         <div class="col-6">
             <label for="txtNombre">Nombre</label>
-            <input type="text" @bind="@Nombre" name="txtNombre" id="txtNombre">
+            <input type="text" @bind="@Nombre" class="form-control" name="txtNombre" id="txtNombre">
         </div>
         <div class="col-6">
             <label for="txtApellido">Apellido</label>
-            <input type="text" @bind="@Apellido" name="txtApellido" id="txtApellido">
+            <input type="text" @bind="@Apellido" class="form-control" name="txtApellido" id="txtApellido">
         </div>
     </div>
     <div class="mb-3 row">
         <div class="col-6">
-            <label for="txtCarrera">Carrera</label>
-            <input type="text" @bind="@Carrera" name="txtCarrera" id="txtCarrera">
+            <label for="cboCarrera">Carrera</label>
+            <select name="cboCarrera" id="cboCarrera" class="form-select" @bind="CarreraId">
+                @foreach (var carrera in Carreras)
+                {
+                    <option value="@carrera.Id">@carrera.Nombre</option>
+                }                    
+            </select>
         </div>
         <div class="col-6">
             <label for="txtMatricula">Matricula</label>
-            <input type="text" @bind="@Matricula" name="txtMatricula" id="txtMatricula" maxlength="9">
+            <input type="text" @bind="@Matricula" class="form-control" name="txtMatricula" id="txtMatricula" maxlength="9">
         </div>
     </div>
     <div class="mb-3 row">
         <div class="col-6">
             <label for="txtFN">Fecha de Nacimiento</label>
-            <input type="date" name="txtFN" id="txtFN" @bind="@FechaNacimiento">
+            <input type="date" name="txtFN" class="form-control" id="txtFN" @bind="@FechaNacimiento">
         </div>
     </div>
     <div style="text-align: center ;">
-        <button type="button" class="btn btn-success">Guardar</button>
+        <button type="button" @onclick="Agregar" class="btn btn-success">Guardar</button>
         <button type="button" class="btn btn-warning">Limpiar</button>
         <button type="button" class="btn btn-danger">Eliminar</button>
     </div>
@@ -74,12 +79,22 @@
     public string Apellido { get; set; } = null!;
     public DateTime FechaNacimiento { get; set; }
     public string Matricula { get; set; } = null!;
-    public string Carrera { get; set; } = null!;
+    public int CarreraId { get; set; }
+    public List<Carrera> Carreras { get; set; } = null!;
     public List<Estudiante> Estudiantes { get; set; } = null!;
         protected override Task OnInitializedAsync()
         {
             Estudiantes = new List<Estudiante>();
+            Carreras = new List<Carrera>()
+                {
+                    new Carrera(){Id = 1, Nombre = "Agropecuaria"},
+                    new Carrera(){Id = 2, Nombre = "Informatica"},
+                    new Carrera(){Id = 3, Nombre = "Derecho"}
+                };
             return base.OnInitializedAsync();
+        }
+        Carrera BuscarCarrera(){
+            return Carreras.FirstOrDefault(c=>c.Id == CarreraId)!;
         }
     private void Agregar(){
         Estudiantes.Add(new Estudiante(){
@@ -88,7 +103,8 @@
             Apellido = Apellido,
             Matricula = Matricula,
             FechadeNacimiento = FechaNacimiento,
-            Carrera = Carrera
+            Carrera = BuscarCarrera(),
+            CarreraId = CarreraId
             });
     }
     private string FechaNacIsValid() => FechaNacimiento>DateTime.Now ? "is-invalid":"";
